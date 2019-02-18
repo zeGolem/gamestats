@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">GameStats</string>
+    <!-- Drawers text -->
+    <string name="home">Acceuil</string>
+    <string name="game_overwatch">Overwatch</string>
+    <string name="battletag">Battle Tag</string>
+    <string name="platform">Platforme</string>
+    <string name="region">Région</string>
+    <string name="apply">Appliquer</string>
+    <string name="gamezs_won">Parties gagnées</string>
+    <string name="games_played">Parties jouées</string>
+    <string name="quick_play">Parties rapides</string>
+
+    <string-array name="platforms">
+        <item>PC</item>
+        <item>XBox</item>
+        <item>PlayStation 4</item>
+    </string-array>
+
+    <string-array name="regions">
+        <item>Europe</item>
+        <item>Amérique</item>
+        <item>Asie</item>
+    </string-array>
+
+</resources>
