@@ -1,0 +1,29 @@
+- Posts jouées -> Jsp
+- Nombre de game -> List de games
+- Winrate	 -> Chiant
+- Kills et assists -> Chiant
+- Income récupéré -> Jsp
+- Score de vision -> Jsp
+
+Champion : https://cdn.discordapp.com/attachments/316957775580364801/563014033570005002/Capture_decran_7.png
+
+Match : KDA
+	Farm
+	Nbr de sbires
+	Gold
+https://cdn.discordapp.com/attachments/316957775580364801/563014345873817610/Capture_decran_8.png
+https://cdn.discordapp.com/attachments/316957775580364801/563014420444217369/Capture_decran_9.png
+
+
+
+
+
+
+
+OpenDota - https://docs.opendota.com/
+
+Apex Legend - https://www.apexlegendshut.com/free-api
+
+PUBG - https://developer.playbattlegrounds.com/
+
+osu! - https://github.com/ppy/osu-api/wiki

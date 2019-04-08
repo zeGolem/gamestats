@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GameStats</string>
+    <string name="home">Acceuil</string>
+    <string name="game_overwatch">Overwatch</string>
+    <string name="battletag">Battle Tag</string>
+    <string name="platform">Platforme</string>
+    <string name="region">Région</string>
+    <string name="apply">Appliquer</string>
+    <string name="games_won">Parties gagnées</string>
+    <string name="games_played">Parties jouées</string>
+    <string name="quick_play">Partie rapide</string>
+    <string name="elimination_avg">Éliminations moyennes</string>
+    <string name="elimination">Éliminations</string>
+    <string name="master_hero">Héro principal</string>
+    <string name="deaths">Morts</string>
+    <string name="time_played">Temps de jeu</string>
+    <string name="league">League Of Legends</string>
+    <string name="error_private">Ce profile est privé</string>
+    <string name="battletag_hint">Nom du joueur + ID du joueur</string>
+    <string name="username">Pseudo</string>
+    <string name="summoner_name">Nom de l\'invoqueur</string>
+    <string name="summoner_hint">Nom du compte</string>
+    <string name="error_data">Les données n\'ont pas été définies correctement</string>
+    <string name="infos">Informations</string>
+</resources>

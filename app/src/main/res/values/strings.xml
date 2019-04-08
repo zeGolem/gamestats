@@ -1,15 +1,25 @@
 <resources>
     <string name="app_name">GameStats</string>
     <!-- Drawers text -->
-    <string name="home">Acceuil</string>
+    <string name="home">Home</string>
     <string name="game_overwatch">Overwatch</string>
     <string name="battletag">Battle Tag</string>
-    <string name="platform">Platforme</string>
-    <string name="region">Région</string>
-    <string name="apply">Appliquer</string>
-    <string name="gamezs_won">Parties gagnées</string>
-    <string name="games_played">Parties jouées</string>
-    <string name="quick_play">Parties rapides</string>
+    <string name="platform">Platform</string>
+    <string name="region">Region</string>
+    <string name="apply">Apply</string>
+    <string name="games_won">Games won</string>
+    <string name="games_played">Games played</string>
+    <string name="quick_play">Quick play</string>
+    <string name="elimination_avg">Avreage elimination</string>
+    <string name="elimination">Eliminations</string>
+    <string name="master_hero">Master hero</string>
+    <string name="deaths">Deaths</string>
+    <string name="time_played">Play time</string>
+    <string name="league">League Of Legends</string>
+    <string name="error_private">This profile is private</string>
+    <string name="battletag_hint">Player nick + Player ID</string>
+
+    <string name="username">Username</string>
 
     <string-array name="platforms">
         <item>PC</item>
@@ -22,5 +32,9 @@
         <item>Amérique</item>
         <item>Asie</item>
     </string-array>
+    <string name="summoner_name">Summoner name</string>
+    <string name="summoner_hint">Account name</string>
+    <string name="error_data">The data wasn\'t set properly</string>
+    <string name="infos">Informations</string>
 
 </resources>

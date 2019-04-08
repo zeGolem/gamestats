@@ -1,30 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="353dp"
-        android:layout_height="228dp"
+        android:layout_height="54dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         app:cardBackgroundColor="@android:color/holo_blue_dark"
         app:cardCornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        app:layout_constraintTop_toTopOf="parent">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
+            <TextView
+                android:id="@+id/overwatch_level_display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lol_username_display" />
 
             <TextView
                 android:id="@+id/textView5"
@@ -34,18 +42,41 @@
                 android:layout_marginLeft="16dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/battletag"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/overwatch_battletag_display"
+                android:id="@+id/lol_username_display"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginLeft="16dp"
+                android:layout_marginTop="4dp"
                 android:textColor="@android:color/background_dark"
                 app:layout_constraintStart_toEndOf="@+id/textView5"
                 app:layout_constraintTop_toTopOf="@+id/textView5" />
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="353dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:cardBackgroundColor="@android:color/holo_blue_dark"
+        app:cardCornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
 
             <TextView
                 android:id="@+id/textView6"
@@ -54,7 +85,7 @@
                 android:layout_marginStart="32dp"
                 android:layout_marginLeft="32dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/gamezs_won"
+                android:text="@string/games_won"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -69,25 +100,88 @@
                 app:layout_constraintTop_toTopOf="@+id/textView6" />
 
             <TextView
+                android:id="@+id/overwatch_quick_elims"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintStart_toEndOf="@+id/textView7"
+                app:layout_constraintTop_toTopOf="@+id/textView7" />
+
+            <TextView
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
                 android:layout_marginLeft="32dp"
                 android:layout_marginTop="8dp"
-                android:text="@string/games_played"
+                android:text="@string/elimination"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
             <TextView
-                android:id="@+id/overwatch_quick_games_played_display"
+                android:id="@+id/overwatch_quick_elims_avg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
-                android:layout_marginLeft="12dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
                 android:textColor="@android:color/background_dark"
-                app:layout_constraintStart_toEndOf="@+id/textView7"
-                app:layout_constraintTop_toTopOf="@+id/textView7" />
+                app:layout_constraintStart_toEndOf="@+id/textView9"
+                app:layout_constraintTop_toTopOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/elimination_avg"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <TextView
+                android:id="@+id/overwatch_quick_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintStart_toEndOf="@+id/textView10"
+                app:layout_constraintTop_toTopOf="@+id/textView10" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/master_hero"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/deaths"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <TextView
+                android:id="@+id/overwatch_quick_deaths"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintStart_toEndOf="@+id/textView11"
+                app:layout_constraintTop_toTopOf="@+id/textView11" />
 
             <TextView
                 android:id="@+id/textView8"
@@ -98,8 +192,30 @@
                 android:layout_marginTop="8dp"
                 android:text="@string/quick_play"
                 android:textColor="@android:color/background_dark"
+                android:textSize="18sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/overwatch_quick_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@android:color/background_dark"
+                app:layout_constraintStart_toEndOf="@+id/textView12"
+                app:layout_constraintTop_toTopOf="@+id/textView12" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/time_played"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
 
         </android.support.constraint.ConstraintLayout>

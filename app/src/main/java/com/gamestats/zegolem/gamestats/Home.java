@@ -1,10 +1,7 @@
 package com.gamestats.zegolem.gamestats;
 
-import android.content.Context;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.app.FragmentManager;
-import android.os.Debug;
-import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
@@ -15,14 +12,14 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.TextView;
+
+import com.gamestats.zegolem.gamestats.league.LeagueFragment;
+import com.gamestats.zegolem.gamestats.overwatch.OverwatchFragment;
 
 public class Home extends AppCompatActivity {
 
     DrawerLayout mDrawerLayout;
+    String lastFragmentTag;
 
 
     @Override
@@ -45,11 +42,12 @@ public class Home extends AppCompatActivity {
         final FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         final Fragment HomeFrag = new HomeFragment();
         final Fragment OverwatchFrag = new OverwatchFragment();
+        final Fragment LeagueFragment = new LeagueFragment();
         //fragmentTransaction.add(R.id.fragment_container, HomeFrag, "home");
         //fragmentTransaction.commitNow();
         //fragmentManager.executePendingTransactions();
 
-        displayFragment(HomeFrag, "", "home");
+        displayFragment(HomeFrag, "home");
 
 
 
@@ -67,24 +65,13 @@ public class Home extends AppCompatActivity {
 
                         switch (menuItem.getItemId()){
                             case R.id.nav_home:
-//                                FragmentManager fm = getSupportFragmentManager();
-//                                FragmentTransaction ft = fm.beginTransaction();
-//                                // fragmentTransaction.remove(fragmentManager.findFragmentByTag("overwatch")).commitNow();
-//                                ft.replace(R.id.fragment_container, HomeFrag, "home");
-//                                ft.commit();
-//                                fm.executePendingTransactions();
-                                displayFragment(HomeFrag, "overwatch", "home");
+                                displayFragment(HomeFrag, "home");
                                 break;
                             case R.id.nav_overwatch:
-//                                FragmentManager fm = getSupportFragmentManager();
-//                                FragmentTransaction ft = fm.beginTransaction();
-//                                Fragment old = fm.findFragmentByTag("home");
-//                                if(old!=null)
-//                                    ft.remove(old).commit();
-//                                ft.replace(R.id.fragment_container, OverwatchFrag, "overwatch");
-//                                ft.commit();
-//                                fm.executePendingTransactions();
-                                displayFragment(OverwatchFrag, "home", "overwatch");
+                                displayFragment(OverwatchFrag, "overwatch");
+                                break;
+                            case R.id.nav_league:
+                                displayFragment(LeagueFragment, "league");
                                 break;
 
                         }
@@ -141,7 +128,7 @@ public class Home extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void displayFragment(Fragment newFragment, String oldFragmentTag, String newFragmentTag){
+    public void displayFragment(Fragment newFragment, String newFragmentTag){
         FragmentManager fm = getSupportFragmentManager();
         FragmentTransaction ft = fm.beginTransaction();
         ft.replace(R.id.fragment_container, newFragment, newFragmentTag);

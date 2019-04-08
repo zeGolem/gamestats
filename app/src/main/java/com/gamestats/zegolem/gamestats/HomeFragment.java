@@ -2,16 +2,17 @@ package com.gamestats.zegolem.gamestats;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Scroller;
 import android.widget.Spinner;
-import android.widget.TextView;
 
-import java.util.logging.ConsoleHandler;
+import com.gamestats.zegolem.gamestats.league.LeagueData;
+import com.gamestats.zegolem.gamestats.overwatch.OverwatchData;
 
 public class HomeFragment extends Fragment {
     View inflatedView;
@@ -57,11 +58,28 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        final EditText LOLSummonerName = inflatedView.findViewById(R.id.lol_summoner_name);
+        LOLSummonerName.addTextChangedListener(new TextWatcher() {
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                LeagueData.AccountName = LOLSummonerName.getText().toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+
         return inflatedView;
     }
-    public void setOW_ClickListener() {
 
-    }
 
 
 
